@@ -5,6 +5,10 @@ import analyzeGitHubProfile from "../utils/analyzeProfile.js";
 export const analyzeProfile = async (req, res, next) => {
     try {
         const username = req.params.username;
+         const existingUser = await getProfileByUsername(username); 
+        if (existingUser) {
+            return res.json({ success: false, message: "User already exists" });
+        }
         const user = await fetchGitHubUser(username);
         const repos = await fetchGitHubRepos(username);
         const analysis = analyzeGitHubProfile(user, repos);
