@@ -62,7 +62,7 @@ USE github_profile_db;
 
 CREATE TABLE github_profiles (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    github_username VARCHAR(100),
+    github_username VARCHAR(100) UNIQUE,
     name VARCHAR(255),
     public_repository_count INT,
     followers INT,
