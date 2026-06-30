@@ -61,22 +61,22 @@ https://api.github.com/users/{username}/repos
 
 #### Run table schema:
 
-  CREATE TABLE github_profiles (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    github_username VARCHAR(100) UNIQUE,
-    name VARCHAR(255),
-    public_repository_count INT,
-    followers INT,
-    following INT,
-    public_gists INT,
-    account_creation_date DATETIME,
-    account_age VARCHAR(50),
-    profile_url TEXT,
-    total_stars INT,
-    total_forks INT,
-    most_starred_repository VARCHAR(255),
-    last_updated_time DATETIME
-);
+ - CREATE TABLE github_profiles (
+  -  id INT AUTO_INCREMENT PRIMARY KEY,
+  -  github_username VARCHAR(100) UNIQUE,
+  -  name VARCHAR(255),
+  -  public_repository_count INT,
+  -  followers INT,
+  -  following INT,
+  -  public_gists INT,
+  -  account_creation_date DATETIME,
+  -  account_age VARCHAR(50),
+  -  profile_url TEXT,
+  -  total_stars INT,
+  -  total_forks INT,
+  -  most_starred_repository VARCHAR(255),
+  -  last_updated_time DATETIME
+- );
 
 ### 4.Run Project
     npm run dev
